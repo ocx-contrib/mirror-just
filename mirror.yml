@@ -1,0 +1,87 @@
+name: just
+target:
+  registry: ocx.sh
+  repository: just
+
+source:
+  type: github_release
+  owner: casey
+  repo: just
+  # just tags are bare semver — no "v" prefix (e.g. "1.51.0").
+  tag_pattern: "^(?P<version>\\d+\\.\\d+\\.\\d+)$"
+
+# Intentionally omitting:
+#   arm-unknown-linux-musleabihf        — no OCX linux/arm platform
+#   armv7-unknown-linux-musleabihf      — no OCX linux/arm platform
+#   loongarch64-unknown-linux-musl      — no OCX platform
+#   riscv64gc-unknown-linux-musl        — no OCX platform
+#   SHA256SUMS                          — sidecar checksum file
+# Anchored ^…$ patterns already exclude all of the above.
+assets:
+  linux/amd64:
+    - "^just-.*-x86_64-unknown-linux-musl\\.tar\\.gz$"
+  linux/arm64:
+    - "^just-.*-aarch64-unknown-linux-musl\\.tar\\.gz$"
+  darwin/amd64:
+    - "^just-.*-x86_64-apple-darwin\\.tar\\.gz$"
+  darwin/arm64:
+    - "^just-.*-aarch64-apple-darwin\\.tar\\.gz$"
+  windows/amd64:
+    - "^just-.*-x86_64-pc-windows-msvc\\.zip$"
+  windows/arm64:
+    - "^just-.*-aarch64-pc-windows-msvc\\.zip$"
+
+# Archive layout: all platforms use strip_components 0.
+# The tarball/zip holds just(/.exe) + docs flat at the archive root.
+# Binary lands directly at the content root — PATH = ${installPath}.
+asset_type:
+  type: archive
+  strip_components: 0
+
+metadata:
+  default: metadata.json
+
+skip_prereleases: true
+cascade: true
+build_timestamp: none
+
+versions:
+  min: "1.40.0"
+  new_per_run: 5
+  poll_interval: "0 */6 * * *"
+
+verify:
+  github_asset_digest: true
+
+concurrency:
+  max_downloads: 8
+  max_bundles: 4
+  max_pushes: 2
+  rate_limit_ms: 100
+  max_retries: 3
+  compression_threads: 0
+
+tests:
+  - name: smoke
+    script: tests/smoke.star
+
+platforms:
+  linux/amd64:
+    runner: ubuntu-latest
+  linux/arm64:
+    runner: ubuntu-24.04-arm
+  darwin/amd64:
+    runner: macos-14
+  darwin/arm64:
+    runner: macos-14
+    shell: bash
+  windows/amd64:
+    runner: windows-latest
+    shell: pwsh
+  windows/arm64:
+    runner: windows-11-arm
+    shell: pwsh
+
+notify:
+  discord:
+    webhook_secret: OCX_MIRROR_DISCORD_HOOK

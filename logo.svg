@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="just">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1a1f2e"/>
+      <stop offset="1" stop-color="#0d1117"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f0c040"/>
+      <stop offset="1" stop-color="#d4a017"/>
+    </linearGradient>
+  </defs>
+  <!-- rounded square background -->
+  <rect width="512" height="512" rx="104" fill="url(#bg)"/>
+  <!-- terminal prompt: > symbol -->
+  <g fill="none" stroke="url(#accent)" stroke-width="30" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M108 172 L176 256 L108 340"/>
+  </g>
+  <!-- "just" wordmark -->
+  <text x="268" y="310" font-family="'JetBrains Mono','DejaVu Sans Mono','Courier New',monospace"
+        font-size="118" font-weight="700" text-anchor="middle" fill="#e6edf3">just</text>
+</svg>
