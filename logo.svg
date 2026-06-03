@@ -1,21 +1,36 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="just">
-  <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#1a1f2e"/>
-      <stop offset="1" stop-color="#0d1117"/>
-    </linearGradient>
-    <linearGradient id="accent" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#f0c040"/>
-      <stop offset="1" stop-color="#d4a017"/>
-    </linearGradient>
-  </defs>
-  <!-- rounded square background -->
-  <rect width="512" height="512" rx="104" fill="url(#bg)"/>
-  <!-- terminal prompt: > symbol -->
-  <g fill="none" stroke="url(#accent)" stroke-width="30" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M108 172 L176 256 L108 340"/>
-  </g>
-  <!-- "just" wordmark -->
-  <text x="268" y="310" font-family="'JetBrains Mono','DejaVu Sans Mono','Courier New',monospace"
-        font-size="118" font-weight="700" text-anchor="middle" fill="#e6edf3">just</text>
-</svg>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="180"
+   height="180"
+   viewBox="0 0 180 180"
+   version="1.1"
+   id="svg1"
+   xml:space="preserve"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><defs
+     id="defs1" /><g
+     id="layer1"><circle
+       style="fill:#ffffff;fill-opacity:1;stroke-width:1.14747"
+       id="path3"
+       cx="90"
+       cy="90"
+       r="80.846619" /><circle
+       style="fill:#000000;fill-opacity:1;stroke-width:1.04944"
+       id="path1"
+       cx="90.247383"
+       cy="89.85157"
+       r="65.112701" /><circle
+       style="fill:#ffffff;fill-opacity:1;stroke-width:1.277"
+       id="path2"
+       cx="89.975258"
+       cy="-56.280922"
+       r="18.133589"
+       transform="scale(1,-1)" /><circle
+       style="fill:#ffffff;fill-opacity:1;stroke-width:1.277"
+       id="path2-6"
+       cx="89.942604"
+       cy="-123.87827"
+       r="18.133589"
+       transform="scale(1,-1)" /></g></svg>
