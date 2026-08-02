@@ -22,12 +22,12 @@ conditional logic, and cross-platform shell support.
 ## Install with ocx
 
 ```sh
-ocx install ocx.sh/just
+ocx install ocx.sh/just/just
 ```
 
 ```sh
 # or pin a specific version
-ocx install ocx.sh/just:1.51.0
+ocx install ocx.sh/just/just:1.51.0
 ```
 
 ## Links

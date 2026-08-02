@@ -1,4 +1,4 @@
-# tests/smoke.star — stable across upstream releases.
+# just/tests/smoke.star — stable across upstream releases.
 # just is a command runner. Assert on the contract (exit code, version shape,
 # input-derived output), never on help/version prose.
 
