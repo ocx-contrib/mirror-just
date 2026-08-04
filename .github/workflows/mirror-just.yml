@@ -6,7 +6,7 @@ name: just
 
 on:
   schedule:
-    - cron: '0 */6 * * *'
+    - cron: '22 0-23/6 * * *'
   workflow_dispatch:
   push:
     branches: [main]
