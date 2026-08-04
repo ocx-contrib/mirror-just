@@ -19,17 +19,6 @@ conditional logic, and cross-platform shell support.
   recipe from the `justfile` in the current or parent directory. Run `just --list`
   to see all available recipes, or `just --evaluate <var>` to inspect a variable.
 
-## Install with ocx
-
-```sh
-ocx install ocx.sh/just/just
-```
-
-```sh
-# or pin a specific version
-ocx install ocx.sh/just/just:1.51.0
-```
-
 ## Links
 
 - [just website](https://just.systems)
